@@ -1,0 +1,17 @@
+.navbar , .herocase  {
+    background-image: url(../../img/inbetweening/4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 40px;
+}
+
+.question{
+    background-image: url(../../img/inbetweening/7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

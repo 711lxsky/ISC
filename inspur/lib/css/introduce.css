@@ -1,0 +1,20 @@
+.introduce-navbar {
+    background-image: url(../../img/xdu/xd_sunsetting.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.introduce-hero{
+    background-image: url(../../img/inbetweening/Polo\ Blue\ to\ White\ Linen.svg);
+}
+
+.pictureshow{
+    background-image: url(../../img/inbetweening/Cape\ Cod\ to\ Kangaroo.svg);
+}
+
+
+body::before{
+    display: block;
+    content: '';
+    height: 40px;
+}

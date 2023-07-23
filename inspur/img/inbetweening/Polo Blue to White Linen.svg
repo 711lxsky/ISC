@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" 
+  viewBox="0 0 100 100" preserveAspectRatio="none">
+   <linearGradient id="gradient" gradientUnits="objectBoundingBox" 
+    x1="17%" y1="88%" x2="83%" y2="12%">
+    <stop offset="0%" stop-color="#8eb7e0" stop-opacity="1"/>,<stop offset="33.33333333333333%" stop-color="#b4c8e2" stop-opacity="1"/>,<stop offset="66.66666666666666%" stop-color="#d6dae4" stop-opacity="1"/>,<stop offset="100%" stop-color="#f7ece5" stop-opacity="1"/>
+   </linearGradient>
+   <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" />
+ </svg>
