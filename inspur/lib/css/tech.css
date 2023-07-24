@@ -1,4 +1,25 @@
 .tech-navbar {
-    background-image: url(../../img/inbetweening/Shark\ to\ Indigo.svg);
+    background-image: url(../../img/inbetweening/change_bg3.svg);
 }
 
+body::before{
+    display: block;
+    content: '';
+    height: 80px;
+}
+
+.tech-ctf{
+    background-image: url(../../img/inbetweening/ctf-bg.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.tech-ai{
+    background-image: url(../../img/inbetweening/change_bg5.svg);
+    background-size: 51%;
+    background-repeat: no-repeat;
+}
+
+.tech-web{
+    background-image: url(../../img/inbetweening/change_bg6.svg);
+}
