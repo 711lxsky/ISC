@@ -1,4 +1,4 @@
-.tech-navbar {
+.tech-navbar , .tech-about{
     background-image: url(../../img/inbetweening/change_bg3.svg);
 }
 
@@ -7,6 +7,8 @@ body::before{
     content: '';
     height: 80px;
 }
+
+
 
 .tech-ctf{
     background-image: url(../../img/inbetweening/ctf-bg.gif);

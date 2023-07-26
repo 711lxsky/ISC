@@ -1,3 +1,13 @@
 .operate-navbar{
-    background-image: url(../../img/inbetweening/Turkish\ Rose\ to\ White.svg);
+    background-image: url(../../img/inbetweening/Contessa\ to\ Ship\ Cove.svg);
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 80px;
+}
+
+.operate-get{
+    background-image: url(../../img/inbetweening/Brandy\ Rose\ to\ Breaker\ Bay.svg);
 }
