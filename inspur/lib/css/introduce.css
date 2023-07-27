@@ -8,10 +8,6 @@
     background-image: url(../../img/inbetweening/change_bg1.svg);
 }
 
-.pictureshow{
-    background-image: url(../../img/inbetweening/change_bg2.svg);
-}
-
 
 body::before{
     display: block;
