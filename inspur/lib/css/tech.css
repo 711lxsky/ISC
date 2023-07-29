@@ -16,11 +16,7 @@ body::before{
     background-size: 100%;
 }
 
-.tech-ai{
-    background-image: url(../../img/inbetweening/change_bg5.svg);
-    background-size: 51%;
-    background-repeat: no-repeat;
-}
+
 
 .tech-web{
     background-image: url(../../img/inbetweening/change_bg6.svg);
