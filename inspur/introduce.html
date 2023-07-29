@@ -50,23 +50,27 @@
                         <a href="member.html" class="nav-link text-light">
                             <img src="img/icon/member.svg" width="30">成员</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="blog/site/index.html" class="nav-link text-light">
+                            <img src="img/icon/blog.png" width="30">博客</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- 过渡 -->
-    <section class="p-4 bg-secondary">
+    <section class="p-4 bg-dark">
 
     </section>
 
     <!-- 照片墙 -->
-    <section class="p-5 pictureshow">
-        <div class="container ">
-            <div class="text-center p-3">
+    <section class="p-4 pictureshow bg-dark-subtle">
+        <div class="container">
+            <div class="text-center pt-2">
                 <h2 class="border border-3 border-dark rounded-pill p-3">活动展示&#10049</h2>
             </div>
-            <div id="carouselExampleCaptions" class="carousel slide p-3" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide p-2 text-center" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -79,36 +83,37 @@
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
                         aria-label="Slide 5"></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner container ratio ratio-16x9">
                     <div class="carousel-item active">
-                        <img src="img/inspur/2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>技术茶话会</h5>
+                        <h5 class="p-2">技术茶话会</h5>
+                        <img src="img/inspur/2.jpg" class="d-block img-thumbnail">
+                        <div class="carousel-caption d-none d-sm-block">
                             <p style="font-family: FZShuTi;">日常开展技术交流是浪潮人的习惯</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/inspur/1.jpeg" class="d-block w-100" alt="...">
+                        <h5 class="p-3">浪潮六周年生日会</h5>
+                        <img src="img/inspur/1.jpeg" class="d-block img-thumbnail" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/inspur/5.jpg" class="d-block w-100" alt="...">
+                        <h5 class="p-2">成员合影</h5>
+                        <img src="img/inspur/5.jpg" class="d-block w-100 img-thumbnail" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>成员合影</h5>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/inspur/3.jpeg" class="d-block w-100" alt="...">
+                        <h5 class="p-1">浪潮生日会</h5>
+                        <img src="img/inspur/3.jpeg" class="d-block w-100 img-thumbnail" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>浪潮生日会</h5>
                             <p style="font-family: FZShuTi;">超多小礼物等你哦 </p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/inspur/4.jpg" class="d-block w-100" alt="...">
+                        <h5>技术沙龙</h5>
+                        <img src="img/inspur/4.jpg" class="d-block w-100 img-thumbnail" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>技术沙龙</h5>
                             <p style="font-family: FZShuTi;">干货满满！</p>
                         </div>
                     </div>
@@ -125,9 +130,9 @@
                 </button>
             </div>
         </div>
-        <div class="text-center pt-4">
+        <div class="text-center pt-3">
             <h4> 心动了吗？<img src="img/icon/heart.png" width="30"> </h4>
-            <div>&#10140<a class="link-warning"
+            <div>&#10140<a class="link-primary"
                     href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=a8Y8NR-m69A3mMLeTFJL1eKM5OcqUiNn&authKey=D4OLWI%2BwQCPie1hnHDAs93iZjlg9LCca5RdO%2BvxeHaumgeU2Af%2BKKuawXFJhS88%2F&noverify=0&group_code=860063761">
                     快来加入我们吧！</a>
                 <p class="pt-1"> <span class="badge bg-success">招新Q群860063761</span></p>
@@ -137,7 +142,7 @@
 
     <!-- 数据段 -->
     <section class="dateshow bg-dark text-light text-lg-start">
-        <div class="container">
+        <div class="container p-3">
             <div class="row g-2">
                 <div class="col-sm-6 col-md-6 col-lg-3">
                     <div class="row g-0">
@@ -188,47 +193,49 @@
     </section>
 
     <!-- 概览段 -->
+
     <section class="pt-5 introduce-hero">
         <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-md pt-4 pe-4 introduce-text">
-                    <h2 class="p-3 rounded-pill border border-3 border-dark text-center ">&#9733俱乐部概览</h2>
-                    <p style="font-family: STXinWei;">西电浪潮俱乐部（Inspur Student
-                        Club简称ISC）成立于2017年，我们以企业资源为依托，为同学们增加一个<span class="fw-bold">提升就业技能</span>以及<span
-                            class="fw-bold">增加知识储备</span>的平台。</p>
-                    <p>通过技术培训、学术讲座、浪潮集团参观访问、技术茶话会等活动，俱乐部已为往届同学提供了一个高水平的机器学习、数据挖掘、算法竞赛平台；并给予包括但不限于<span
-                            class="fw-bold">实习、就业、升学</span>等方面的指导和帮助。
-                        成立至今俱乐部拥有精通各方向大佬。在风趣且实力强劲的大牛老师坐镇下，俱乐部作风优良、学风严谨求实。我们的目标是<span
-                            class="text-decoration-underline">发挥俱乐部成员的技术能力，让所有同学都有提升组织能力和技术实践能力的机会，共同成长</span>；成员之间信息分享，互帮互助，为社团成员的未来发展起积极作用。
-                    </p>
-                    <p style="font-family: NSimSun;">目前，浪潮俱乐部构成主要分为<span class="fw-bold">技术部</span>和<span
-                            class="fw-bold">运营部</span>两个大模块</p>
-                </div>
-                <div class="col-md pt-4 px-3 text-center">
+            <div class="col-md pt-4">
+                <h2 class="p-3 rounded-pill border border-3 border-dark text-center ">&#9733俱乐部概览</h2>
+                <p class="lead">西电浪潮俱乐部（Inspur Student
+                    Club简称ISC）成立于2017年，我们以企业资源为依托，为同学们打造一个<span class="fw-bold">提升就业技能</span>以及<span
+                        class="fw-bold">增加知识储备</span>的平台。</p>
+                <p>通过技术培训、学术讲座、浪潮集团参观访问、技术茶话会等活动，俱乐部已为往届同学提供了一个高水平的机器学习、数据挖掘、算法竞赛平台；并给予包括但不限于<span
+                        class="fw-bold">实习、就业、升学</span>等方面的指导和帮助。
+                    成立至今俱乐部拥有精通各方向大佬。在风趣且实力强劲的大牛老师坐镇下，俱乐部作风优良、学风严谨求实。我们的目标是<span
+                        class="fw-bold">发挥俱乐部成员的技术能力，让所有同学都有提升组织能力和技术实践能力的机会，共同成长</span>；成员之间信息分享，互帮互助，为社团成员的未来发展起积极作用。
+                </p>
+                <p>目前，浪潮俱乐部构成主要分为<span class="fw-bold">技术部</span>和<span class="fw-bold">运营部</span>两个大模块</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md">
                     <div class="card mb-3 border-2 border-secondary " style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-5 col-lg-3">
                                 <img src="img/inbetweening/3.png" height="200" width="180">
                             </div>
-                            <div class="col-md-8 ps-3">
+                            <div class="col ps-3">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-family: LiSu;">技术部</h5>
-                                    <small
-                                        class="card-text">我们针对各个组别主要进行相关技术的学习运用，帮助每个同学创造更多可能。现有ACM组、AI组、WEB组、CTF组</small>
+                                    <small class="card-text">我们针对各个组别主要进行相关技术的学习运用，帮助每个同学创造更多可能。</small>
+                                    <small>现有ACM组、AI组、WEB组，并在今年新增体系结构组</small>
                                     <br>
                                     <a href="techsection.html" class="btn btn-dark mt-3">查看更多</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col">
                     <div class="card mb-3 border-2 border-dark" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-6 col-lg-4">
                                 <img src="img/inbetweening/1.png" height="200" width="180">
                             </div>
-                            <div class="col-md-8 ps-3">
+                            <div class="col ps-3">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="font-family: STKaiTi;">运营部</h5>
+                                    <h5 class="card-title" style="font-family: LiSu;">运营部</h5>
                                     <small
                                         class="card-text">我们是浪潮的打理人、护航者。我们致力于挖掘成员潜力，让所有人各尽其才。本着为俱乐部服务，提升自己能力的理念，我们聚于这个家庭</small>
                                     <br>
@@ -237,7 +244,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
