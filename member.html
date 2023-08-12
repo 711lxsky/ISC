@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/css/member.css" rel="stylesheet">
+    <link href="lib/js/bootstrap.bundle.min.js">
     <link href="img/inspur/inspur_logo.png" rel="icon">
     <title>member</title>
 </head>
 
 <body>
+<script src="src/member.js">
+    $(document).ready(function () {
+        $('#card').click(function (event) {
+            event.stopPropagation(); // 阻止事件传播到父组件
+            alert('子组件按钮被点击');
+        });
+    });
+</script>
 
     <!-- 导航栏 -->
     <nav class="navbar bg-dark navbar-expand-lg member-navbar">
@@ -61,7 +70,7 @@
     </nav>
 
     <section class=" p-4 text-center text-sm-start member-show">
-        <div class="container">
+        <div>
             <div class=" text-center">
                 <h1 class=" p-3 d-inline-flex border border-3 border-danger rounded-circle">成员墙</h1>
                 <p>作为西电高质量俱乐部，浪潮汇聚了大批具有真才实学的有志XDer，成就浪潮的同时，造就自己的才华和理想</p>
@@ -71,11 +80,14 @@
             <div class="text-center pt-3 pb-3">
                 <h4>2017--2019届</h4>
             </div>
-            <div class="">
-                <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+            <div class="collapse" id="nothing">
+
+            </div>
+            <div class="container btn p-5" style="background-color: yellow" data-bs-toggle="collapse" href="#text" role="button" aria-expanded="false" aria-controls="text" id="background" onclick="handleClick(event)">
+                <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center z-1" id="card">
                     <!-- 1 -->
-                    <div class="col">
-                        <div class="card bg-dark-subtle h-100">
+                    <div class="col btn" style="position: relative; background-color: blue" href="#nothing" data-bs-toggle="collapse">
+                        <div class="card bg-dark-subtle h-100" >
                             <div class="card-body text-center">
                                 <img src="img/inspur/chenjunhao.png" class=" w-25 rounded-circle mb-2">
                                 <h4 class="card-title" style="font-family: STXingkai;">陈浚豪</h4>
@@ -145,6 +157,14 @@
                         </div>
                     </div>
 
+                </div>
+
+            </div>
+            <div class="collapse" id="text">
+                <div class="card card-body">
+                    123321<br>
+                    nihao<br>
+                    ziajian<br>
                 </div>
             </div>
 

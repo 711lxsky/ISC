@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <title>nihao</title>
+</head>
+
+<body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<div class="container btn p-5" >
+    <div class="container btn btn-primary" data-bs-toggle="collapse" style="background-color: yellow" href="#test" role="button" aria-expanded="false" aria-controls="test" id="background">
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary" style="background-color: red" data-bs-toggle="modal" href="#hello" role="button" aria-expanded="false" aria-controls="hello" id="background">
+                    你好
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="hello" class="modal fade" tabindex="-1">
+    hello
+</div>
+<div id="test" class="collapse">
+    test
+</div>
+</body>
+
+</html>
