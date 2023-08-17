@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/css/member.css" rel="stylesheet">
+    <link href="lib/js/bootstrap.bundle.min.js">
     <link href="img/inspur/inspur_logo.png" rel="icon">
     <title>member</title>
 </head>
 
 <body>
+<script src="src/member.js">
+    $(document).ready(function () {
+        $('#card').click(function (event) {
+            event.stopPropagation(); // 阻止事件传播到父组件
+            alert('子组件按钮被点击');
+        });
+    });
+</script>
 
     <!-- 导航栏 -->
     <nav class="navbar bg-dark navbar-expand-lg member-navbar">
@@ -61,7 +70,7 @@
     </nav>
 
     <section class=" p-4 text-center text-sm-start member-show">
-        <div class="container">
+        <div>
             <div class=" text-center">
                 <h1 class=" p-3 d-inline-flex border border-3 border-danger rounded-circle">成员墙</h1>
                 <p>作为西电高质量俱乐部，浪潮汇聚了大批具有真才实学的有志XDer，成就浪潮的同时，造就自己的才华和理想</p>
@@ -71,450 +80,464 @@
             <div class="text-center pt-3 pb-3">
                 <h4>2017--2019届</h4>
             </div>
-            <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
-                <!-- 1 -->
-                <div class="col">
-                    <div class="card bg-dark-subtle h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/chenjunhao.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: STXingkai;">陈浚豪</h4>
-                            
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                data-bs-target="#Modal1">
-                                查看详情
-                            </button>
-                            <a href="mailto:948837307@qq.com" class="link-dark ps-3"> Email</a>
+            <div class="collapse" id="nothing">
 
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel1">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            陈浚豪，计算机科学与技术学院2014级软件工程本科生、2018级硕士研究生，西电浪潮俱乐部2017-2018届、2018-2019届<b>主席、西电浪潮俱乐部创始人</b>。在校期间获得包括美国大学生数学建模竞赛一等奖、全国大学生数学建模竞赛陕西省一等奖、全国绿色计算大赛一等奖、校一等奖学金在内的奖励多项。以优异成绩推荐至西安电子科技大学计算机科学与技术学院免试攻读<b>硕士研究生</b>，在硕士期间<b>携手西电计算机科学与技术学院与浪潮集团共同创办西电浪潮俱乐部</b>。硕士毕业后加入<b>百度凤巢</b>，从事信息流方向的广告策略研发工作。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
+            </div>
+            <div class="container btn p-5" style="background-color: yellow" data-bs-toggle="collapse" href="#text" role="button" aria-expanded="false" aria-controls="text" id="background" onclick="handleClick(event)">
+                <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center z-1" href="#nothing" data-bs-toggle="collapse">
+                    <!-- 1 -->
+                    <div class="col btn" style="position: relative; background-color: blue" >
+                        <div class="card bg-dark-subtle h-100" >
+                            <div class="card-body text-center">
+                                <img src="img/inspur/chenjunhao.png" class=" w-25 rounded-circle mb-2">
+                                <h4 class="card-title" style="font-family: STXingkai;">陈浚豪</h4>
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                        data-bs-target="#Modal1">
+                                    查看详情
+                                </button>
+                                <a href="mailto:948837307@qq.com" class="link-dark ps-3"> Email</a>
+
+                                <!-- Modal -->
+                                <div class="modal fade " id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="ModalLabel1">详细信息</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                陈浚豪，计算机科学与技术学院2014级软件工程本科生、2018级硕士研究生，西电浪潮俱乐部2017-2018届、2018-2019届<b>主席、西电浪潮俱乐部创始人</b>。在校期间获得包括美国大学生数学建模竞赛一等奖、全国大学生数学建模竞赛陕西省一等奖、全国绿色计算大赛一等奖、校一等奖学金在内的奖励多项。以优异成绩推荐至西安电子科技大学计算机科学与技术学院免试攻读<b>硕士研究生</b>，在硕士期间<b>携手西电计算机科学与技术学院与浪潮集团共同创办西电浪潮俱乐部</b>。硕士毕业后加入<b>百度凤巢</b>，从事信息流方向的广告策略研发工作。
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">关闭</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- 2 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/wangkun.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: KaiTi;">王坤</h4>
-                            
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#Modal2">
-                                查看详情
-                            </button>
-                            <a href="mailto:wangkun.xdu@gmail.com" class="link-primary ps-3">Email</a>
+                    <!-- 2 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <img src="img/inspur/wangkun.png" class=" w-25 rounded-circle mb-2">
+                                <h4 class="card-title" style="font-family: KaiTi;">王坤</h4>
 
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel2">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            王坤，计算机科学与技术学院2016级本科生，西电浪潮俱乐部2017-2018届、2018-2019届副主席。本科在校期间曾获得多次“国家奖学金”表彰，以优异成绩获得<b>全额奖学金</b>赴香港城市大学（City
-                                            University of Hong Kong）Computer Science系攻读博士学位。他的主要研究方向为边缘计算。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#Modal2">
+                                    查看详情
+                                </button>
+                                <a href="mailto:wangkun.xdu@gmail.com" class="link-primary ps-3">Email</a>
+
+                                <!-- Modal -->
+                                <div class="modal fade " id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="ModalLabel2">详细信息</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                王坤，计算机科学与技术学院2016级本科生，西电浪潮俱乐部2017-2018届、2018-2019届副主席。本科在校期间曾获得多次“国家奖学金”表彰，以优异成绩获得<b>全额奖学金</b>赴香港城市大学（City
+                                                University of Hong Kong）Computer Science系攻读博士学位。他的主要研究方向为边缘计算。
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">关闭</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
-
-            <div class="text-center pt-5 pb-3">
-                <h4>2019-2020届</h4>
-            </div>
-            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xxl-5 justify-content-center">
-                <!-- 3 -->
-                <div class="col">
-                    <div class="card bg-black h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/sunboyuan.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title text-secondary" style="font-family: STXingkai;">孙博远</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#Modal3">
-                                查看详情
-                            </button>
-                            <a href="mailto:sbysbysby123@gmail.com" class="link-secondary ps-3">Email</a>
-                            <span class="text-secondary">&nbsp/&nbsp</span>
-                            <a href="https://www.bbbbchan.com" class="link-secondary">Blog(博客)</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel3">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            孙博远（ID：BB酱），计算机科学与技术学院2017级软件工程专业本科生，西电浪潮俱乐部2019-2020届<b>主席</b>，2018-2019届技术部部长，ACM校队成员，西电为之工作室核心开发成员。在校期间获得ACM/ICPC国际大学生程序设计竞赛全国邀请赛铜奖，四川省赛银奖，陕西省赛铜奖，美国大学生数学建模竞赛国际一等奖，全国大学生数学建模竞赛国家级二等奖等竞赛奖励多项，获得2019年“国家奖学金”。本科期间曾以第三作者投稿CCF
-                                            A类会议ACM SIGIR
-                                            2020，同时有多项Web项目开发经历，以优异成绩推免至<b>南开大学程明明教授课题组免试攻读硕士研究生</b>，主要研究方向为计算机视觉。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/sunxieyang.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: KaiTi;">孙燮阳</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modal4">
-                                查看详情
-                            </button>
-                            <a href="mailto:xdusund@gmail.com" class="link-dark ps-3">Email</a> &nbsp/&nbsp
-                            <a href="http://www.sund-xys.cn/" class="link-dark">Blog(博客)</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel4">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            孙燮阳，中共党员，计算机科学与技术学院2017级本科生，西电浪潮俱乐部2019-2020届副主席（技术部）、2018-2019届技术部副部长、2019-2020年任西电计科院网络与信息安全开放创新实验室负责人。在校期间获得包括美国大学生数学建模竞赛国际一等奖、全国大学生数学建模竞赛国家级二等奖在内的奖励多项。以优异成绩推荐至<b>西安交通大学</b>计算机科学与技术学院免试攻读硕士研究生，主要研究方向为无线侧信道安全与隐蔽通信，毕业时一篇论文以第一作者投稿至<b>计算机网络顶会IEEE
-                                                INFOCOM-2022</b>（CCF A）。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/zhaoxueyan.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: KaiTi;">赵雪岩</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal5">
-                                查看详情
-                            </button>
-                            <a href="mailto:zhaoxueyan131@gmail.com" class="ps-2 link-warning">Email</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal5" tabindex="-1" aria-labelledby="ModalLabel5"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel5">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            赵雪岩，计算机科学与技术学院2017级本科生，西电浪潮俱乐部2019-2020届副主席（技术部），2018-2019届技术部副部长，西电学生网络管理协会2019-2020届总负责人。在校期间获得包括第43届<b>ACM/ICPC国际大学生程序设计竞赛亚洲区域赛(沈阳站)金奖</b>，(青岛站)银奖，第七届陕西省程序设计大赛金奖，第一届全国绿色计算大赛项目挑战组全国一等奖，第二届<b>集成电路EDA设计精英挑战赛(单人组队)二等奖</b>，校一等奖学金在内的多项奖励。以优异成绩推免至<b>中国科学院计算技术研究所攻读博士研究生</b>，主要研究方向为开源芯片与开源EDA生态，逻辑综合，物理设计。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 6 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/zhangzhicheng.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: KaiTi;">张知诚</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#Modal6">
-                                查看详情
-                            </button>
-                            <a href="mailto:gloryzzc6@sina.com" class="ps-2 link-success">Email</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal6" tabindex="-1" aria-labelledby="ModalLabel6"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel6">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            张知诚，人工智能学院2017级本科生，西电浪潮俱乐部2019-2020届秘书长、副主席（活动部），2018-2019届活动部副部长。在校期间获得包括美国大学生数学建模竞赛国际一等奖、全国大学生数学建模竞赛陕西省一等奖在内的奖励多项。本科期间曾参与了两项公益项目，其中开发的AI言语障碍矫正平台获得“互联网+”大学生创新创业大赛省级二等奖、“挑战杯”全国大学生课外学术科技作品竞赛省级二等奖。以优异成绩推荐至<b>南开大学计算机学院免试攻读博士研究生</b>，主要研究方向为计算机视觉。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 7 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/chenming.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: KaiTi;">陈铭</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-info" data-bs-toggle="modal"
-                                data-bs-target="#Modal7">
-                                查看详情
-                            </button>
-                            <a href="mailto:515435960@qq.com" class="link-info ps-2">Email</a> &nbsp/&nbsp
-                            <a href="https://cm233.github.io/" class="link-info">Blog(博客)</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal7" tabindex="-1" aria-labelledby="ModalLabel7"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel7">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            陈铭，计算机科学与技术学院软件工程专业卓越班2017级本科生，西电浪潮俱乐部2019-2020届副主席（宣传部）、2018-2019届宣传部部长。在校期间获包括全国大学生数学建模陕西省一等奖在内的多项奖励，以优异成绩推荐至<b>上海科技大学信息科学与技术学院智能网络中心免试攻读硕士研究生</b>，他的主要研究方向为离线强化学习。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="text-center pt-5 pb-3">
-                <h4>2020-2021届</h4>
-            </div>
-            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
-                <!-- 8 -->
-                <div class="col">
-                    <div class="card bg-secondary h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/chenlinghao.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: STXingkai;">陈凌灏</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                data-bs-target="#Modal8">
-                                查看详情
-                            </button>
-                            <a href="mailto:xdu.lhchen@gmail.com" class="link-dark ps-2">Email</a> &nbsp/&nbsp
-                            <a href="https://github.com/LinghaoChan" class="link-dark">GitHub</a> &nbsp/&nbsp
-                            <a href="https://www.zhihu.com/people/hao-55-16/posts" class="link-dark">Zhihu(知乎)</a>
-                            &nbsp/&nbsp
-                            <a href="https://lhchen.top/" class="link-dark">HoemPage(主页)</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal8" tabindex="-1" aria-labelledby="ModalLabel8"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel8">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            陈凌灏，中共党员，计算机科学与技术学院软件工程专业2018级本科生，西电浪潮俱乐部2020-2021届主席、2019-2020届技术部部长。在校期间曾获得全国大学生数学建模竞赛国家级一等奖、国际大学生数学建模竞赛一等奖等多项奖励，连续三年获得"国家奖学金"，推研排名为专业第1名，以优异成绩推荐免试至<b>清华大学攻读博士研究生</b>，研究方向为计算机视觉。他本科期间在计科院智能媒体与数据工程研究所实习，主要研究方向为图表示学习、网络异常检测，合作发表论文一篇于时空数据挖掘领域顶会ACM
-                                            SIGSPATIAL-2021，向人工智能领域顶会AAAI-2022（CCF A）投稿论文一篇。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 9 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <img src="img/inspur/lianzhixiang.png" class=" w-25 rounded-circle mb-2">
-                            <h4 class="card-title" style="font-family: STXingkai;">连志翔</h4>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal9">
-                                查看详情
-                            </button>
-                            <a href="mailto:zhxlian.s@gmail.com" class=" ps-3">Email</a>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal9" tabindex="-1" aria-labelledby="ModalLabel9"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel9">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            连志翔，网络与信息安全学院网络空间安全专业实验班2018级本科生，西电浪潮俱乐部2020-2021届副主席（技术部）、2019-2020届技术部副部长。在校期间获“美亚杯”中国电子数据取证大赛三等奖、“长安杯”电子数据取证大赛三等奖、校单项奖学金等多项奖项，推荐至西安电子科技大学网络与信息安全学院免试攻读博士研究生，主要研究方向为网络空间安全和数据库自治。
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="text-center pt-5 pb-3">
-                <h4>2021-2022届</h4>
-            </div>
-            <div class="row g-3 pt-3 justify-content-center">
-
-                <!-- 10 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <!--<img src="..." class=" w-25 rounded-circle mb-2">-->
-                            <h4 class="card-title">未知</h4>
-                            <p class="card-text">xxx</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#Modal10">
-                                查看详情
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal10" tabindex="-1" aria-labelledby="ModalLabel10"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel10">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 11 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card">
-                        <div class="card-body text-center">
-                           <!--<img src="..." class=" w-25 rounded-circle mb-2">-->
-                            <h4 class="card-title">未知</h4>
-                            <p class="card-text">xxx</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#Modal11">
-                                查看详情
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal11" tabindex="-1" aria-labelledby="ModalLabel11"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel11">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 12 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <!--<img src="..." class=" w-25 rounded-circle mb-2">-->
-                            <h4 class="card-title">未知</h4>
-                            <p class="card-text">xxx</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#Modal12">
-                                查看详情
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade " id="Modal12" tabindex="-1" aria-labelledby="ModalLabel12"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabel12">详细信息</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">关闭</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="collapse" id="text">
+                <div class="card card-body">
+                    123321<br>
+                    nihao<br>
+                    ziajian<br>
                 </div>
             </div>
+
+
+<!--            <div class="text-center pt-5 pb-3">-->
+<!--                <h4>2019-2020届</h4>-->
+<!--            </div>-->
+<!--            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xxl-5 justify-content-center">-->
+<!--                &lt;!&ndash; 3 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card bg-black h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/sunboyuan.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title text-secondary" style="font-family: STXingkai;">孙博远</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal3">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:sbysbysby123@gmail.com" class="link-secondary ps-3">Email</a>-->
+<!--                            <span class="text-secondary">&nbsp/&nbsp</span>-->
+<!--                            <a href="https://www.bbbbchan.com" class="link-secondary">Blog(博客)</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel3">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            孙博远（ID：BB酱），计算机科学与技术学院2017级软件工程专业本科生，西电浪潮俱乐部2019-2020届<b>主席</b>，2018-2019届技术部部长，ACM校队成员，西电为之工作室核心开发成员。在校期间获得ACM/ICPC国际大学生程序设计竞赛全国邀请赛铜奖，四川省赛银奖，陕西省赛铜奖，美国大学生数学建模竞赛国际一等奖，全国大学生数学建模竞赛国家级二等奖等竞赛奖励多项，获得2019年“国家奖学金”。本科期间曾以第三作者投稿CCF-->
+<!--                                            A类会议ACM SIGIR-->
+<!--                                            2020，同时有多项Web项目开发经历，以优异成绩推免至<b>南开大学程明明教授课题组免试攻读硕士研究生</b>，主要研究方向为计算机视觉。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 4 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/sunxieyang.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: KaiTi;">孙燮阳</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modal4">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:xdusund@gmail.com" class="link-dark ps-3">Email</a> &nbsp/&nbsp-->
+<!--                            <a href="http://www.sund-xys.cn/" class="link-dark">Blog(博客)</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel4">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            孙燮阳，中共党员，计算机科学与技术学院2017级本科生，西电浪潮俱乐部2019-2020届副主席（技术部）、2018-2019届技术部副部长、2019-2020年任西电计科院网络与信息安全开放创新实验室负责人。在校期间获得包括美国大学生数学建模竞赛国际一等奖、全国大学生数学建模竞赛国家级二等奖在内的奖励多项。以优异成绩推荐至<b>西安交通大学</b>计算机科学与技术学院免试攻读硕士研究生，主要研究方向为无线侧信道安全与隐蔽通信，毕业时一篇论文以第一作者投稿至<b>计算机网络顶会IEEE-->
+<!--                                                INFOCOM-2022</b>（CCF A）。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; 5 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/zhaoxueyan.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: KaiTi;">赵雪岩</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal5">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:zhaoxueyan131@gmail.com" class="ps-2 link-warning">Email</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal5" tabindex="-1" aria-labelledby="ModalLabel5"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel5">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            赵雪岩，计算机科学与技术学院2017级本科生，西电浪潮俱乐部2019-2020届副主席（技术部），2018-2019届技术部副部长，西电学生网络管理协会2019-2020届总负责人。在校期间获得包括第43届<b>ACM/ICPC国际大学生程序设计竞赛亚洲区域赛(沈阳站)金奖</b>，(青岛站)银奖，第七届陕西省程序设计大赛金奖，第一届全国绿色计算大赛项目挑战组全国一等奖，第二届<b>集成电路EDA设计精英挑战赛(单人组队)二等奖</b>，校一等奖学金在内的多项奖励。以优异成绩推免至<b>中国科学院计算技术研究所攻读博士研究生</b>，主要研究方向为开源芯片与开源EDA生态，逻辑综合，物理设计。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 6 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/zhangzhicheng.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: KaiTi;">张知诚</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-success" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal6">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:gloryzzc6@sina.com" class="ps-2 link-success">Email</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal6" tabindex="-1" aria-labelledby="ModalLabel6"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel6">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            张知诚，人工智能学院2017级本科生，西电浪潮俱乐部2019-2020届秘书长、副主席（活动部），2018-2019届活动部副部长。在校期间获得包括美国大学生数学建模竞赛国际一等奖、全国大学生数学建模竞赛陕西省一等奖在内的奖励多项。本科期间曾参与了两项公益项目，其中开发的AI言语障碍矫正平台获得“互联网+”大学生创新创业大赛省级二等奖、“挑战杯”全国大学生课外学术科技作品竞赛省级二等奖。以优异成绩推荐至<b>南开大学计算机学院免试攻读博士研究生</b>，主要研究方向为计算机视觉。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 7 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/chenming.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: KaiTi;">陈铭</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-info" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal7">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:515435960@qq.com" class="link-info ps-2">Email</a> &nbsp/&nbsp-->
+<!--                            <a href="https://cm233.github.io/" class="link-info">Blog(博客)</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal7" tabindex="-1" aria-labelledby="ModalLabel7"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel7">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            陈铭，计算机科学与技术学院软件工程专业卓越班2017级本科生，西电浪潮俱乐部2019-2020届副主席（宣传部）、2018-2019届宣传部部长。在校期间获包括全国大学生数学建模陕西省一等奖在内的多项奖励，以优异成绩推荐至<b>上海科技大学信息科学与技术学院智能网络中心免试攻读硕士研究生</b>，他的主要研究方向为离线强化学习。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--            <div class="text-center pt-5 pb-3">-->
+<!--                <h4>2020-2021届</h4>-->
+<!--            </div>-->
+<!--            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">-->
+<!--                &lt;!&ndash; 8 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card bg-secondary h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/chenlinghao.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: STXingkai;">陈凌灏</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal8">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:xdu.lhchen@gmail.com" class="link-dark ps-2">Email</a> &nbsp/&nbsp-->
+<!--                            <a href="https://github.com/LinghaoChan" class="link-dark">GitHub</a> &nbsp/&nbsp-->
+<!--                            <a href="https://www.zhihu.com/people/hao-55-16/posts" class="link-dark">Zhihu(知乎)</a>-->
+<!--                            &nbsp/&nbsp-->
+<!--                            <a href="https://lhchen.top/" class="link-dark">HoemPage(主页)</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal8" tabindex="-1" aria-labelledby="ModalLabel8"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel8">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            陈凌灏，中共党员，计算机科学与技术学院软件工程专业2018级本科生，西电浪潮俱乐部2020-2021届主席、2019-2020届技术部部长。在校期间曾获得全国大学生数学建模竞赛国家级一等奖、国际大学生数学建模竞赛一等奖等多项奖励，连续三年获得"国家奖学金"，推研排名为专业第1名，以优异成绩推荐免试至<b>清华大学攻读博士研究生</b>，研究方向为计算机视觉。他本科期间在计科院智能媒体与数据工程研究所实习，主要研究方向为图表示学习、网络异常检测，合作发表论文一篇于时空数据挖掘领域顶会ACM-->
+<!--                                            SIGSPATIAL-2021，向人工智能领域顶会AAAI-2022（CCF A）投稿论文一篇。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 9 &ndash;&gt;-->
+<!--                <div class="col">-->
+<!--                    <div class="card h-100">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            <img src="img/inspur/lianzhixiang.png" class=" w-25 rounded-circle mb-2">-->
+<!--                            <h4 class="card-title" style="font-family: STXingkai;">连志翔</h4>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal9">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+<!--                            <a href="mailto:zhxlian.s@gmail.com" class=" ps-3">Email</a>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal9" tabindex="-1" aria-labelledby="ModalLabel9"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel9">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            连志翔，网络与信息安全学院网络空间安全专业实验班2018级本科生，西电浪潮俱乐部2020-2021届副主席（技术部）、2019-2020届技术部副部长。在校期间获“美亚杯”中国电子数据取证大赛三等奖、“长安杯”电子数据取证大赛三等奖、校单项奖学金等多项奖项，推荐至西安电子科技大学网络与信息安全学院免试攻读博士研究生，主要研究方向为网络空间安全和数据库自治。-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="text-center pt-5 pb-3">-->
+<!--                <h4>2021-2022届</h4>-->
+<!--            </div>-->
+<!--            <div class="row g-3 pt-3 justify-content-center">-->
+
+<!--                &lt;!&ndash; 10 &ndash;&gt;-->
+<!--                <div class="col-md-6 col-lg-3">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            &lt;!&ndash;<img src="..." class=" w-25 rounded-circle mb-2">&ndash;&gt;-->
+<!--                            <h4 class="card-title">未知</h4>-->
+<!--                            <p class="card-text">xxx</p>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal10">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal10" tabindex="-1" aria-labelledby="ModalLabel10"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel10">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            ...-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 11 &ndash;&gt;-->
+<!--                <div class="col-md-6 col-lg-3">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body text-center">-->
+<!--                           &lt;!&ndash;<img src="..." class=" w-25 rounded-circle mb-2">&ndash;&gt;-->
+<!--                            <h4 class="card-title">未知</h4>-->
+<!--                            <p class="card-text">xxx</p>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal11">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal11" tabindex="-1" aria-labelledby="ModalLabel11"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel11">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            ...-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 12 &ndash;&gt;-->
+<!--                <div class="col-md-6 col-lg-3">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body text-center">-->
+<!--                            &lt;!&ndash;<img src="..." class=" w-25 rounded-circle mb-2">&ndash;&gt;-->
+<!--                            <h4 class="card-title">未知</h4>-->
+<!--                            <p class="card-text">xxx</p>-->
+<!--                            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"-->
+<!--                                data-bs-target="#Modal12">-->
+<!--                                查看详情-->
+<!--                            </button>-->
+
+<!--                            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                            <div class="modal fade " id="Modal12" tabindex="-1" aria-labelledby="ModalLabel12"-->
+<!--                                aria-hidden="true">-->
+<!--                                <div class="modal-dialog modal-dialog-centered">-->
+<!--                                    <div class="modal-content">-->
+<!--                                        <div class="modal-header">-->
+<!--                                            <h5 class="modal-title" id="ModalLabel12">详细信息</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-body">-->
+<!--                                            ...-->
+<!--                                        </div>-->
+<!--                                        <div class="modal-footer">-->
+<!--                                            <button type="button" class="btn btn-secondary"-->
+<!--                                                data-bs-dismiss="modal">关闭</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </section>
 
