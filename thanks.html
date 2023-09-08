@@ -7,19 +7,75 @@
     <link href="lib/css/member.css" rel="stylesheet">
     <link href="img/inspur/inspur_logo.png" rel="icon">
     <title>thanks</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<!--    element引入-->
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
-<body>
+<body>、
+<!--导航栏-->
+<nav class="navbar bg-dark navbar-expand-lg member-navbar fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/inspur/inspur_logo.png" class="opacity-60" width="60">
+            <img src="img/icon/inspur.png" width="50">
+        </a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-light">
+                        主页
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="introduce.html" class="nav-link text-light">
+                        介绍
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a href="#" class="btn dropdown-toggle text-light" role="button" id="dorpdownMenuLink"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            团队</a>
+                        <ul class="dropdown-menu member-team w-25" aria-labelledby="dorpdownMenuLink">
+                            <li><a href="opratesection.html" class="dropdown-item">运营部 <img
+                                    src="img/icon/operationsection1.png" width="20"></a> </li>
+                            <li><a href="techsection.html" class="dropdown-item">技术部 <img src="img/icon/window.png"
+                                                                                             width="20"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="member.html" class="nav-link text-light">
+                        成员</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog/site/index.html" class="nav-link text-light">
+                        博客</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class=" p-4 text-center text-sm-start member-show">
+    <div class="container">
+        <div class="text-center">
+            <div class="h1 p-3 d-inline-flex border border-3 border-danger rounded-circle">合作名单</div>
+            <p>感谢以下老师与组织为我们俱乐部达成合作，也欢迎更多的伙伴能够与我们一起合作双赢</p>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center pt-3 pb-3">
 
+    </div>
+</section>
 
-<body>
-<div id="thanks"></div>
-<script type="module" src="/src/thanks.js"></script>
-</body>
+<!-- 页脚 -->
+<footer class="p-1 bg-dark text-white text-center">
+    <div class="container">
+        <small class="lead fs-6">Copyright &copy; 2023 ISC-WEB</small>
+    </div>
+</footer>
+
+<script src="lib/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
