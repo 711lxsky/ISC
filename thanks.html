@@ -6,6 +6,8 @@
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/css/thanks.css" rel="stylesheet">
     <link href="img/inspur/inspur_logo.png" rel="icon">
+    <script src="lib/js/jquery.js"></script>
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
     <title>thanks</title>
 </head>
 <body>
@@ -59,20 +61,124 @@
 <section class=" p-4 text-center text-sm-start thanks-show">
     <div class="container">
         <div class="text-center">
-            <div class="h1 p-3 d-inline-flex border border-3 border-danger rounded-circle" style="color:white;">合作名单</div>
-            <p style="color:white;">感谢以下老师与组织为我们俱乐部达成合作，也欢迎更多的伙伴能够与我们一起合作双赢</p>
+            <div class="h1 p-3 d-inline-flex border border-3 border-danger rounded-circle" style="color:white;">俱乐部合作</div>
+            <p style="color:white;">（这里将有一段感谢合作者的话）</p>
         </div>
     </div>
     <hr style="color: white;">
+<!--    合作老师-->
     <div class="text-center pt-3 pb-3" style="color: white;">
         <h3>&#127891合作老师</h3>
     </div>
-    <div class="text-center pt-3 pb-3" style="color: white;">
-        <h3>&#129489&#8205&#128187合作俱乐部</h3>
-    </div>
+<!--    合作公司-->
     <div class="text-center pt-3 pb-3" style="color: white;">
         <h3>&#127970合作公司</h3>
     </div>
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 justify-content-center">
+        <div class="col">
+            <a href="https://www.inspur.com/">
+                <img src="img/cooperation/inspur.png" alt="inspur">
+            </a>
+        </div>
+    </div>
+<!--    合作俱乐部-->
+    <div class="text-center pt-3 pb-3" style="color: white;">
+        <h3>&#129489&#8205&#128187合作俱乐部</h3>
+    </div>
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
+        <div class="col">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#HIC">
+                <img src="img/cooperation/HIC.png">
+            </button>
+            <div class="modal fade" id="HIC" tabindex="-1" aria-labelledby="HIC" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <b>西电华为创新俱乐部</b>
+                        </div>
+                        <div class="modal-body">
+                            &emsp;&emsp;西电华为创新俱乐部是西安电子科技大学与华为西安研究所于 2010 年 10 月24号合作创办的学生社团，目前社团下设 技术部、花粉部、2023实验室三大部门。
+                            <br>
+                            &emsp;&emsp;俱乐部自诞生那天起，一路走来，精彩无限，不仅立足于技术创新，而且注重校园文化活动的开展，致力于打造集数码、摄影、设计与多媒体多元融合的，科研学科素质培养于一体的科创类校企合办俱乐部。
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">关闭</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <img src="img/cooperation/CSSIA.png" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#CSSIA">
+            <div class="modal fade" id="CSSIA" tabindex="-1" aria-labelledby="CSSIA" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <b>西电计算机科学与技术学院科技协会</b>
+                        </div>
+                        <div class="modal-body">
+                            &emsp;&emsp;西安电子科技大学计算机科学与技术学院科技协会，是面向计算机科学与技术学院学生的科学探索教育服务组织。“科技无限，协作创新”是我们不变的宗旨；让大家学习到知识，得到锻炼，找到归属感，是我们一直以来的追求。在计科院科协这个大家庭里，你可以感受到极客式氛围，也可以与大家共同学习进步。你们的加入，将会让这个大家庭迸发出新的活力！
+                            <br><br><br>
+                            <div class="btn-group" role="group" aria-label="CSSIA">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#学术交流部" role="button" aria-expanded="false" aria-controls="学术交流部">学术交流部</a>
+                                <a class="btn btn-dark" data-bs-toggle="collapse" href="#技术部" role="button" aria-expanded="false" aria-controls="技术部">技术部</a>
+                                <a class="btn btn-danger" data-bs-toggle="collapse" href="#运营部" role="button" aria-expanded="false" aria-controls="运营部">运营部</a>
+                            </div>
+                            <div class="collapse" id="学术交流部">
+                                <div class="card card-body">
+                                    <h3>学长带你避坑</h3>
+                                    <br>
+                                    &emsp;&emsp;不管是想卷还是躺平，这里都可以给予各位最轻松的氛围和最周全的建议。入群即可看到学长亲笔写下的“西电避坑一年游”，并且会长期更新。用最真实的笔调带你率先了解一些那些学校不会教你的“内部资料”。欢迎强有力的大牛入群dd萌新学长我，也欢迎刚入门懵懂的学弟学妹能在这里更快的找到自己奋斗的目标。避坑指南，竞赛，均分，超纲知识，超前学习，只要你想知道，都可以加入我们。
+                                    <br>
+                                    &emsp;&emsp;愿你们带着一颗来玩的心，收获一个充实的大脑！
+                                </div>
+                            </div>
+                            <div class="collapse" id="技术部">
+                                <div class="card card-body">
+                                    <h3>稳扎稳打，拓展提升</h3>
+                                    <br>
+                                    &emsp;&emsp;快速排序、图的遍历、贪心算法，研究如何最高效地解决问题总是会给人带来惊喜。在这里，大家一起研究算法，感受算法的巧妙。
+                                    <br>
+                                    &emsp;&emsp;我们每次研讨会都将是干货满满，无论你是算法小白还是竞赛大犇，只要你对算法感兴趣，我们都欢迎你的到来。
+                                    <br>
+                                    &emsp;&emsp;不止于算法，这里还有热心学长帮你解决学习方向上的其他问题，大家互相帮助，一起努力成为顶尖选手。
+
+                                </div>
+                            </div>
+                            <div class="collapse" id="运营部">
+                                <div class="card card-body">
+                                    <h3>运营部</h3>
+                                    <br>
+                                    &emsp;&emsp;“我想要看幽美的田野。我想要看静谧的星空。我想要看壮丽的山河。这些全由自己的双手和心来绘制。”
+                                    <br>
+                                    &emsp;&emsp;运营部负责科协日常的运营活动；同时，我们热衷于媒体设计，视频剪辑、P图、特效、小动画......缤纷的世界由我们双手绘制。
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">关闭</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(c) {
+            for (let i = 0; i < c.length; i++) {
+                new bootstrap.Collapse(getElementById(c[i]), {
+                    toggle: false
+                }).hide()
+            }
+        }
+    </script>
+
 </section>
 
 <!-- 页脚 -->
@@ -81,7 +187,33 @@
         <small class="lead fs-6">Copyright &copy; 2023 ISC-WEB</small>
     </div>
 </footer>
+<script>
+//    一个当点击一个折叠后收起其他折叠的方法
+    $(document).ready(function() {
+        // 获取所有折叠按钮
+        var $buttons = $('.btn');
 
-<script src="lib/js/bootstrap.bundle.min.js"></script>
+        // 监听折叠按钮的点击事件
+        $buttons.click(function() {
+            // 获取当前被点击的折叠按钮
+            var $button = $(this);
+
+            // 获取当前按钮对应的折叠内容
+            var $content = $($button.attr('data-target'));
+
+            // 判断当前折叠内容是否已展开
+            var isExpanded = $content.hasClass('show');
+
+            // 隐藏所有其他的折叠内容
+            $('.collapse.show').not($content).collapse('hide');
+
+            // 如果折叠内容未展开，则展开当前内容
+            if (!isExpanded) {
+                $content.collapse('show');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
