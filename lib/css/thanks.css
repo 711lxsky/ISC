@@ -1,0 +1,13 @@
+.thanks-show{
+    background-image: url(../../img/inbetweening/wave-bg1.svg);
+}
+
+.thanks-navbar{
+    background-color: #0E2A47;
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 64px;
+}
