@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--导航栏-->
-<nav class="navbar navbar-expand-lg thanks-navbar fixed-top">
+<nav class="navbar navbar-expand-lg thanks-navbar fixed-top ">
     <div class="container">
         <a href="index.html" class="navbar-brand">
             <img src="img/inspur/inspur_logo.png" class="opacity-60" width="60">
@@ -58,38 +58,57 @@
         </div>
     </div>
 </nav>
-<section class=" p-4 text-center text-sm-start thanks-show">
+<section class=" p-4 text-center text-sm-start thanks-show ">
     <div class="container">
         <div class="text-center">
-            <div class="h1 p-3 d-inline-flex border border-3 border-danger rounded-circle" style="color:white;">俱乐部合作</div>
+            <div class="h1 p-3 d-inline-flex ">俱乐部合作</div>
             <p style="color:white;">（这里将有一段感谢合作者的话）</p>
         </div>
     </div>
     <hr style="color: white;">
 <!--    合作老师-->
-    <div class="text-center pt-3 pb-3" style="color: white;">
+    <div class="text-center pt-3 pb-3" style="">
         <h3>&#127891合作老师</h3>
     </div>
+    <hr>
 <!--    合作公司-->
-    <div class="text-center pt-3 pb-3" style="color: white;">
+    <div class="text-center pt-3 pb-3" style="">
         <h3>&#127970合作公司</h3>
     </div>
     <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 justify-content-center">
-        <div class="col">
-            <a href="https://www.inspur.com/">
-                <img src="img/cooperation/inspur.png" alt="inspur">
-            </a>
-        </div>
+            <div class="card bg-light md">
+                <div class="card-header justify-content-center d-flex ">
+                    <a href="https://www.inspur.com/" >
+                        <img src="img/cooperation/inspur.png" alt="inspur">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <h6 class="" style="text-align: center; font-weight: bolder">浪潮集团</h6>
+                        <div>&emsp;&emsp;浪潮集团是中国领先的云计算、大数据服务商，拥有浪潮信息、浪潮软件、浪潮数字企业三家上市公司。主要业务涉及云计算、大数据、工业互联网、新一代通信及若干应用场景。已为全球一百二十多个国家和地区提供IT产品和服务。</div>
+                    </div>
+                </div>
+            </div>
     </div>
+    <hr>
 <!--    合作俱乐部-->
-    <div class="text-center pt-3 pb-3" style="color: white;">
+    <div class="text-center pt-3 pb-3" style="">
         <h3>&#129489&#8205&#128187合作俱乐部</h3>
     </div>
     <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
-        <div class="col">
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#HIC">
-                <img src="img/cooperation/HIC.png">
-            </button>
+        <div class="col justify-content-center d-flex">
+
+            <div class="card bg-light w-50">
+                <div class="card-header justify-content-center d-flex h-100">
+                    <img src="img/cooperation/HIC.png" class="" data-bs-toggle="modal" data-bs-target="#HIC">
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <h6 class="" style="text-align: center; font-weight: bolder">西电华为创新俱乐部</h6>
+                        <div>&emsp;&emsp;西电华为创新俱乐部，是西安电子科技大学，与华为西安研究所于合作创办的学生社团……</div>
+                    </div>
+                </div>
+            </div>
             <div class="modal fade" id="HIC" tabindex="-1" aria-labelledby="HIC" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -110,8 +129,19 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <img src="img/cooperation/CSSIA.png" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#CSSIA">
+        <div class="col justify-content-center d-flex">
+            <div class="card bg-light w-50">
+                <div class="card-header justify-content-center d-flex h-50">
+                    <img src="img/cooperation/CSSIA.png" type="button " class="btn" data-bs-toggle="modal" data-bs-target="#CSSIA">
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <h6 class="" style="text-align: center; font-weight: bolder">西电计算机科学与技术学院科技协会</h6>
+                        <div>&emsp;&emsp;西电计算机科学与技术学院科技协会，是面向计算机科学与技术学院学生的科学探索教育服务组织……</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal fade" id="CSSIA" tabindex="-1" aria-labelledby="CSSIA" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
